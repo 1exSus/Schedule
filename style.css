@@ -1,6 +1,10 @@
 body {
   font-family: Arial, sans-serif;
   text-align: center;
+  background-image: url('/src/img/pol1.jpg');
+  background-size: cover; /* Растягиваем изображение, чтобы оно покрыло всю область фона */
+  background-repeat: no-repeat; /* Убираем повторение изображения */
+  background-attachment: fixed; /* Зафиксируем фон, чтобы он не скроллился вместе с содержимым */
 }
 
 h1 {
@@ -80,4 +84,10 @@ p + table {
 #schedule.even {
   background-color: rgb(238, 179, 179); /*фон для четной недели */
   color: rgb(0, 0, 0);
+}
+@media (max-width: 768px) {
+  body {
+    background-image: none; /* Убираем фоновое изображение для мобильных устройств */
+    /* Другие стили для мобильных устройств, если необходимо */
+  }
 }
